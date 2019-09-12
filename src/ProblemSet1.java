@@ -29,10 +29,10 @@ public class ProblemSet1 {
         final double width = 11;
         final double lengthMM = length*25.4;
         final double widthMM = width*25.4;
+        final double area = lengthMM*widthMM;
         df2.setRoundingMode(RoundingMode.UP);
-        final double lengthMMRounded = df2.format(lengthMM);
-        final double widthMMRounded = df2.format(widthMM);
-        System.out.println((lengthMMRounded*widthMMRounded) + " square millimeters.");
+        final double lengthMMRounded = df2.format(area);
+        System.out.println(area + " square millimeters.");
 
         /*
          * Exercise 2.
