@@ -74,7 +74,7 @@ public class ProblemSet1 {
         final double quizWeight = (quiz1 + quiz2 + quiz3)*weightQ/3;
         final double testWeight = (test1 + test2 + test3)*weightT/3;
         final double answer = homeworkWeight+quizWeight+testWeight;
-        // System.out.printf("%.2f %.\n\n", answer);
+        System.out.printf("%.2f%%.\n", answer);
 
         /*
          * Exercise 5.
