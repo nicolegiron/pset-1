@@ -74,7 +74,7 @@ public class ProblemSet1 {
         final double quizWeight = (quiz1 + quiz2 + quiz3)*weightQ/3;
         final double testWeight = (test1 + test2 + test3)*weightT/3;
         final double answer = homeworkWeight+quizWeight+testWeight;
-        System.out.printf("%.2f%%.\n", answer);
+        System.out.printf("%.2f%%.\n\n", answer);
 
         /*
          * Exercise 5.
@@ -82,8 +82,9 @@ public class ProblemSet1 {
          * I make $12.50/hour working as a cashier at a local supermarket. How much money
          * will I make this week?
          */
-
-
+         final double wage = 12.5;
+         final double weeklyPay = (wage*7.5)+(wage*8)+(wage*10.5)+(wage*9.5)+(wage*6)+(wage*11.5);
+         System.out.printf("$%.2f.\n", weeklyPay);
 
         /*
          * Exercise 6.
@@ -91,7 +92,10 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
 
-
+         final double salary = 117000;
+         final double federal = .24;
+         final double state = .0637;
+         final double preTac401k = .07;
 
         /*
          * Exercise 7.
