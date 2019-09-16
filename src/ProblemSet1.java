@@ -16,7 +16,7 @@ import java.text.DecimalFormat;
 
 public class ProblemSet1 {
 
-    private static DecimalFormat df2 = new DecimalFormat("#####.###");
+    private static DecimalFormat df2 = new DecimalFormat("##,###.##");
     public static void main(String[] args) {
 
         /*
@@ -31,17 +31,18 @@ public class ProblemSet1 {
         final double widthMM = width*25.4;
         final double area = lengthMM*widthMM;
         df2.setRoundingMode(RoundingMode.UP);
-        final double lengthMMRounded = df2.format(area);
-        System.out.println(area + " square millimeters.");
+        final String lengthMMRounded = df2.format(area);
+        System.out.println("\n" + lengthMMRounded + " square millimeters.\n");
 
         /*
          * Exercise 2.
          *
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
-
-
-
+         final double lengthCM = length*2.54;
+         final double widthCM = width*2.54;
+         final double perimeter = (lengthCM*2) + (widthCM*2);
+         System.out.println(perimeter + " centimeters.\n");
         /*
          * Exercise 3.
          *
