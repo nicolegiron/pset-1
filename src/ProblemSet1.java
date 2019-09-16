@@ -9,7 +9,7 @@
  * Deliverables section).
  *
  * Work through these exercises on your own. Experiment, make mistakes, ask
- * questions, and fix your mistakes. It's the only way to get good at programming. 
+ * questions, and fix your mistakes. It's the only way to get good at programming.
  */
 
 public class ProblemSet1 {
@@ -66,7 +66,15 @@ public class ProblemSet1 {
         int test2 = 87;
         int test3 = 82;
 
+        final double weightH = .15;
+        final double weightQ = .35;
+        final double weightT = .5;
 
+        final double homeworkWeight = (homework1 + homework2 + homework3)*weightH/3;
+        final double quizWeight = (quiz1 + quiz2 + quiz3)*weightQ/3;
+        final double testWeight = (test1 + test2 + test3)*weightT/3;
+        final double answer = homeworkWeight+quizWeight+testWeight;
+        // System.out.printf("%.2f %.\n\n", answer);
 
         /*
          * Exercise 5.
