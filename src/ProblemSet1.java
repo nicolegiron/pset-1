@@ -46,7 +46,7 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-         final double diagonal = Math.sqrt((length*length) + (width*width));
+         final double diagonal = Math.hypot(length, width);
          System.out.printf("%.2f inches.\n\n", diagonal);
 
         /*
@@ -74,7 +74,7 @@ public class ProblemSet1 {
         final double quizWeight = (quiz1 + quiz2 + quiz3)*weightQ/3;
         final double testWeight = (test1 + test2 + test3)*weightT/3;
         final double answer = homeworkWeight+quizWeight+testWeight;
-        System.out.printf("%.2f%%.\n\n", answer);
+        System.out.printf("%,.2f%%.\n\n", answer);
 
         /*
          * Exercise 5.
@@ -84,7 +84,7 @@ public class ProblemSet1 {
          */
          final double wage = 12.5;
          final double weeklyPay = (wage*7.5)+(wage*8)+(wage*10.5)+(wage*9.5)+(wage*6)+(wage*11.5);
-         System.out.printf("$%.2f.\n", weeklyPay);
+         System.out.printf("$%.2f.\n\n", weeklyPay);
 
         /*
          * Exercise 6.
@@ -93,9 +93,13 @@ public class ProblemSet1 {
          */
 
          final double salary = 117000;
-         final double federal = .24;
-         final double state = .0637;
-         final double preTac401k = .07;
+         final double federal = 1 - .24;
+         final double state = 1- .0637;
+         final double preTax401k = 1- .07;
+         final double perPay = (salary/12)/2;
+         final double before401k = perPay*federal*state;
+         final double after401k = before401k*preTax401k;
+         System.out.printf("$%,.2f.\n\n", after401k);
 
         /*
          * Exercise 7.
@@ -104,7 +108,13 @@ public class ProblemSet1 {
          * people will be on the last bus?
          */
 
-
+         final double students = 273;
+         final double teachers = 28;
+         final double capacity = 54;
+         final double buses = Math.ceil((students+teachers) / 54);
+         final double remainder = (students+teachers) % 54;
+         System.out.printf("%.0f buses are needed, with ", buses);
+         System.out.printf("%.0f passengers on the last bus.\n\n", remainder);
 
         /*
          * Exercise 8.
@@ -112,6 +122,11 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
 
+         final double length8 = 48;
+         final double width8 = 24;
+         final double diameter = 6;
+         final double squareArea = (48*24) - (Math.PI*Math.pow(3,2));
+         System.out.printf("%,.2f square inches.\n\n", squareArea);
 
 
         /*
@@ -120,6 +135,15 @@ public class ProblemSet1 {
          * Are the years 2020, 2100, and 2400 leap years?
          */
 
+         final int year1 = 2020;
+         final int year2 = 2100;
+         final int year3 = 2400;
+         final boolean y2020 = ((year1%4==0) && (year1%100!=0)) || (year1%400==0);
+         System.out.println(year1 + " is a leap year..." + y2020);
+         final boolean y2100 = ((year2%4==0) && (year2%100!=0)) || (year2%400==0);
+         System.out.println(year1 + " is a leap year..." + y2100);
+         final boolean y2400 = ((year3%4==0) && (year3%100!=0)) || (year3%400==0);
+         System.out.println(year1 + " is a leap year..." + y2400 + "\n");
 
 
         /*
@@ -128,6 +152,8 @@ public class ProblemSet1 {
          * What is the wind chill?
          */
 
+          final double windChill = 35.74 + (0.6215*38) + ((0.4275*38) - 35.75) * Math.pow(14, 0.16);
+          System.out.printf("%.1f degrees.\n", windChill);
 
 
     }
