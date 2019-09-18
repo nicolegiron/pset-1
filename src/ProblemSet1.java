@@ -21,11 +21,12 @@ public class ProblemSet1 {
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-        final double length = 8.5;
-        final double width = 11;
-        final double lengthMM = length*25.4;
-        final double widthMM = width*25.4;
-        final double area = lengthMM*widthMM;
+        final double LENGTH = 8.5;
+        final double WIDTH = 11;
+        final double INTOMM = 25.4;
+        double lengthmm = LENGTH*INTOMM;
+        double widthmm = WIDTH*INTOMM;
+        double area = lengthmm*widthmm;
         System.out.printf("\n%,.2f square millimeters. \n\n", area);
 
         /*
@@ -33,10 +34,10 @@ public class ProblemSet1 {
          *
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
-
-         final double lengthCM = length*2.54;
-         final double widthCM = width*2.54;
-         final double perimeter = (lengthCM*2) + (widthCM*2);
+         final double INTOCM = 2.54;
+         double lengthcm = LENGTH*INTOCM;
+         double widthcm = WIDTH*INTOCM;
+         double perimeter = (lengthcm*2) + (widthcm*2);
          System.out.println(perimeter + " centimeters.\n");
 
         /*
@@ -46,7 +47,7 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-         final double diagonal = Math.hypot(length, width);
+         double diagonal = Math.hypot(LENGTH, WIDTH);
          System.out.printf("%.2f inches.\n\n", diagonal);
 
         /*
@@ -66,14 +67,14 @@ public class ProblemSet1 {
         int test2 = 87;
         int test3 = 82;
 
-        final double weightH = .15;
-        final double weightQ = .35;
-        final double weightT = .5;
+        final double WEIGHTH = .15;
+        final double WEIGHTQ = .35;
+        final double WEIGHTT = .5;
 
-        final double homeworkWeight = (homework1 + homework2 + homework3)*weightH/3;
-        final double quizWeight = (quiz1 + quiz2 + quiz3)*weightQ/3;
-        final double testWeight = (test1 + test2 + test3)*weightT/3;
-        final double answer = homeworkWeight+quizWeight+testWeight;
+        double homeworkweight = (homework1 + homework2 + homework3)*WEIGHTH/3;
+        double quizweight = (quiz1 + quiz2 + quiz3)*WEIGHTQ/3;
+        double testweight = (test1 + test2 + test3)*WEIGHTT/3;
+        double answer = homeworkweight+quizweight+testweight;
         System.out.printf("%,.2f%%.\n\n", answer);
 
         /*
@@ -82,8 +83,8 @@ public class ProblemSet1 {
          * I make $12.50/hour working as a cashier at a local supermarket. How much money
          * will I make this week?
          */
-         final double wage = 12.5;
-         final double weeklyPay = (wage*7.5)+(wage*8)+(wage*10.5)+(wage*9.5)+(wage*6)+(wage*11.5);
+         final double WAGE = 12.5;
+         double weeklyPay = (WAGE*7.5)+(WAGE*8)+(WAGE*10.5)+(WAGE*9.5)+(WAGE*6)+(WAGE*11.5);
          System.out.printf("$%.2f.\n\n", weeklyPay);
 
         /*
@@ -92,14 +93,14 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
 
-         final double salary = 117000;
-         final double federal = 1 - .24;
-         final double state = 1- .0637;
-         final double preTax401k = 1- .07;
-         final double perPay = (salary/12)/2;
-         final double before401k = perPay*federal*state;
-         final double after401k = before401k*preTax401k;
-         System.out.printf("$%,.2f.\n\n", after401k);
+         final double SALARY = 117000;
+         final double FEDERAL = 1-.24;
+         final double STATE = 1-.0637;
+         final double PRETAX401K = 1-.07;
+         final double perPay = (SALARY/12)/2;
+         final double before401K = perPay*FEDERAL*STATE;
+         final double after401K = before401K*PRETAX401K;
+         System.out.printf("$%,.2f.\n\n", after401K);
 
         /*
          * Exercise 7.
@@ -108,11 +109,11 @@ public class ProblemSet1 {
          * people will be on the last bus?
          */
 
-         final double students = 273;
-         final double teachers = 28;
-         final double capacity = 54;
-         final double buses = Math.ceil((students+teachers) / 54);
-         final double remainder = (students+teachers) % 54;
+         final double STUDENTS = 273;
+         final double TEACHERS = 28;
+         final double CAPACITY = 54;
+         double buses = Math.ceil((STUDENTS+TEACHERS) / 54);
+         double remainder = (STUDENTS+TEACHERS) % 54;
          System.out.printf("%.0f buses are needed, with ", buses);
          System.out.printf("%.0f passengers on the last bus.\n\n", remainder);
 
@@ -122,9 +123,9 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
 
-         final double length8 = 48;
-         final double width8 = 24;
-         final double diameter = 6;
+         final double LENGTH8 = 48;
+         final double WIDTH8 = 24;
+         final double DIAMETER = 6;
          final double squareArea = (48*24) - (Math.PI*Math.pow(3,2));
          System.out.printf("%,.2f square inches.\n\n", squareArea);
 
@@ -135,15 +136,15 @@ public class ProblemSet1 {
          * Are the years 2020, 2100, and 2400 leap years?
          */
 
-         final int year1 = 2020;
-         final int year2 = 2100;
-         final int year3 = 2400;
-         final boolean y2020 = ((year1%4==0) && (year1%100!=0)) || (year1%400==0);
-         System.out.println(year1 + " is a leap year..." + y2020);
-         final boolean y2100 = ((year2%4==0) && (year2%100!=0)) || (year2%400==0);
-         System.out.println(year1 + " is a leap year..." + y2100);
-         final boolean y2400 = ((year3%4==0) && (year3%100!=0)) || (year3%400==0);
-         System.out.println(year1 + " is a leap year..." + y2400 + "\n");
+         int year1 = 2020;
+         int year2 = 2100;
+         int year3 = 2400;
+         boolean y2020 = ((year1%4==0) && (year1%100!=0)) || (year1%400==0);
+         System.out.println(year1 + " is a leap year..." + Y2020 + ".");
+         boolean y2100 = ((year2%4==0) && (year2%100!=0)) || (year2%400==0);
+         System.out.println(year2 + " is a leap year..." + y2100 + ".");
+         boolean y2400 = ((year3%4==0) && (year3%100!=0)) || (year3%400==0);
+         System.out.println(year3 + " is a leap year..." + y2400 + ".\n");
 
 
         /*
@@ -152,7 +153,7 @@ public class ProblemSet1 {
          * What is the wind chill?
          */
 
-          final double windChill = 35.74 + (0.6215*38) + ((0.4275*38) - 35.75) * Math.pow(14, 0.16);
+          double windChill = 35.74 + (0.6215*38) + ((0.4275*38) - 35.75) * Math.pow(14, 0.16);
           System.out.printf("%.1f degrees.\n", windChill);
 
 
