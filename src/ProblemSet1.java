@@ -112,7 +112,7 @@ public class ProblemSet1 {
          final double STUDENTS = 273;
          final double TEACHERS = 28;
          final double CAPACITY = 54;
-         double buses = Math.ceil((STUDENTS+TEACHERS) / 54);
+         double buses = Math.ceil((STUDENTS+TEACHERS) / CAPACITY);
          double remainder = (STUDENTS+TEACHERS) % 54;
          System.out.printf("%.0f buses are needed, with ", buses);
          System.out.printf("%.0f passengers on the last bus.\n\n", remainder);
@@ -140,7 +140,7 @@ public class ProblemSet1 {
          int year2 = 2100;
          int year3 = 2400;
          boolean y2020 = ((year1%4==0) && (year1%100!=0)) || (year1%400==0);
-         System.out.println(year1 + " is a leap year..." + Y2020 + ".");
+         System.out.println(year1 + " is a leap year..." + y2020 + ".");
          boolean y2100 = ((year2%4==0) && (year2%100!=0)) || (year2%400==0);
          System.out.println(year2 + " is a leap year..." + y2100 + ".");
          boolean y2400 = ((year3%4==0) && (year3%100!=0)) || (year3%400==0);
