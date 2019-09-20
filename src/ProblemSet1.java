@@ -23,10 +23,10 @@ public class ProblemSet1 {
 
         final double LENGTH = 8.5;
         final double WIDTH = 11;
-        final double INTOMM = 25.4;
-        double lengthmm = LENGTH*INTOMM;
-        double widthmm = WIDTH*INTOMM;
-        double area = lengthmm*widthmm;
+        final double IN_TO_MM = 25.4;
+        double lengthMm = LENGTH*IN_TO_MM;
+        double widthMm = WIDTH*IN_TO_MM;
+        double area = lengthMm*widthMm;
         System.out.printf("\n%,.2f square millimeters. \n\n", area);
 
         /*
@@ -34,10 +34,10 @@ public class ProblemSet1 {
          *
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
-         final double INTOCM = 2.54;
-         double lengthcm = LENGTH*INTOCM;
-         double widthcm = WIDTH*INTOCM;
-         double perimeter = (lengthcm*2) + (widthcm*2);
+         final double IN_TO_CM = 2.54;
+         double lengthCm = LENGTH*IN_TO_CM;
+         double widthCm = WIDTH*IN_TO_CM;
+         double perimeter = (lengthCm*2) + (widthCm*2);
          System.out.println(perimeter + " centimeters.\n");
 
         /*
@@ -67,14 +67,14 @@ public class ProblemSet1 {
         int test2 = 87;
         int test3 = 82;
 
-        final double WEIGHTH = .15;
-        final double WEIGHTQ = .35;
-        final double WEIGHTT = .5;
+        final double WEIGHT_H = .15;
+        final double WEIGHT_Q = .35;
+        final double WEIGHT_T = .5;
 
-        double homeworkweight = (homework1 + homework2 + homework3)*WEIGHTH/3;
-        double quizweight = (quiz1 + quiz2 + quiz3)*WEIGHTQ/3;
-        double testweight = (test1 + test2 + test3)*WEIGHTT/3;
-        double answer = homeworkweight+quizweight+testweight;
+        double homeworkWeight = (homework1 + homework2 + homework3)*WEIGHT_H/3;
+        double quizWeight = (quiz1 + quiz2 + quiz3)*WEIGHT_Q/3;
+        double testWeight = (test1 + test2 + test3)*WEIGHT_T/3;
+        double answer = homeworkWeight+quizWeight+testWeight;
         System.out.printf("%,.2f%%.\n\n", answer);
 
         /*
@@ -96,10 +96,10 @@ public class ProblemSet1 {
          final double SALARY = 117000;
          final double FEDERAL = 1-.24;
          final double STATE = 1-.0637;
-         final double PRETAX401K = 1-.07;
+         final double PRE_TAX_401K = 1-.07;
          final double perPay = (SALARY/12)/2;
          final double before401K = perPay*FEDERAL*STATE;
-         final double after401K = before401K*PRETAX401K;
+         final double after401K = before401K*PRE_TAX_401K;
          System.out.printf("$%,.2f.\n\n", after401K);
 
         /*
@@ -123,10 +123,10 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
 
-         final double LENGTH8 = 48;
-         final double WIDTH8 = 24;
+         final double LENGTH_8 = 48;
+         final double WIDTH_8 = 24;
          final double DIAMETER = 6;
-         final double squareArea = (48*24) - (Math.PI*Math.pow(3,2));
+         final double squareArea = (LENGTH_8*WIDTH_8) - (Math.PI*Math.pow(3,2));
          System.out.printf("%,.2f square inches.\n\n", squareArea);
 
 
@@ -155,7 +155,6 @@ public class ProblemSet1 {
 
           double windChill = 35.74 + (0.6215*38) + ((0.4275*38) - 35.75) * Math.pow(14, 0.16);
           System.out.printf("%.1f degrees.\n", windChill);
-
 
     }
 }
