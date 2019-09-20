@@ -71,7 +71,8 @@ public class ProblemSet1 {
         final double WEIGHT_Q = .35;
         final double WEIGHT_T = .5;
 
-        double homeworkWeight = (homework1 + homework2 + homework3)*WEIGHT_H/3;
+        double homeworkWeight = (homework1 + homework2 + homework3)*WEIGHT_H/3; /*Adding all of the grades then
+          multiplying by the weight which is already in decimal form then AFTER multiply by 3*/
         double quizWeight = (quiz1 + quiz2 + quiz3)*WEIGHT_Q/3;
         double testWeight = (test1 + test2 + test3)*WEIGHT_T/3;
         double answer = homeworkWeight+quizWeight+testWeight;
@@ -96,10 +97,12 @@ public class ProblemSet1 {
          final double SALARY = 117000;
          final double FEDERAL = 1-.24;
          final double STATE = 1-.0637;
-         final double PRE_TAX_401K = 1-.07;
+         final double PRE_TAX_401K = 1-.07; /*all of the taxes are in decimal then subtracted by 1 so the variable
+            can later be multiplied by salary*/
          final double perPay = (SALARY/12)/2;
-         final double before401K = perPay*FEDERAL*STATE;
-         final double after401K = before401K*PRE_TAX_401K;
+         final double before401K = perPay*FEDERAL*STATE; //Muliply all taxes with the salary
+         final double after401K = before401K*PRE_TAX_401K; /*After all of the taxes, apply the pre 401k since the code
+           is working backwards to find the take-home pay check*/
          System.out.printf("$%,.2f.\n\n", after401K);
 
         /*
@@ -126,7 +129,7 @@ public class ProblemSet1 {
          final double LENGTH_8 = 48;
          final double WIDTH_8 = 24;
          final double DIAMETER = 6;
-         final double squareArea = (LENGTH_8*WIDTH_8) - (Math.PI*Math.pow(3,2));
+         final double squareArea = (LENGTH_8*WIDTH_8) - (Math.PI*DIAMETER);
          System.out.printf("%,.2f square inches.\n\n", squareArea);
 
 
@@ -139,7 +142,9 @@ public class ProblemSet1 {
          int year1 = 2020;
          int year2 = 2100;
          int year3 = 2400;
-         boolean y2020 = ((year1%4==0) && (year1%100!=0)) || (year1%400==0);
+         boolean y2020 = ((year1%4==0) && (year1%100!=0)) || (year1%400==0); /*Finding if the year%4=0 and the year%100
+           does not equal 0, both of those have to be true, or if the year%400=0, if either of those are correct then
+           the boolean equals true*/
          System.out.println(year1 + " is a leap year..." + y2020 + ".");
          boolean y2100 = ((year2%4==0) && (year2%100!=0)) || (year2%400==0);
          System.out.println(year2 + " is a leap year..." + y2100 + ".");
